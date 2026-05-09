@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "titleDefault": "selmu - Dominant Cell Quiz",
+    "titleTemplate": "%s | selmu",
+    "description": "Answer 7 quick questions and discover your dominant cell today."
+  },
+  "homePage": {
+    "topBarTitle": "selmu",
+    "mascotAlt": "selmu mascot",
+    "stats": {
+      "like": "Like",
+      "view": "View"
+    },
+    "tags": {
+      "socialToy": "social toy",
+      "quiz": "quiz",
+      "mobile": "mobile"
+    },
+    "title": "Discover your dominant cell",
+    "description": "Answer 7 short scenarios and see the result that best matches who you are today.",
+    "startQuiz": "Start Quiz",
+    "viewCells": "View All Cells",
+    "highlights": {
+      "lifeScene": {
+        "title": "Life Scene",
+        "subtitle": "7 questions"
+      },
+      "quickResult": {
+        "title": "Quick Result",
+        "subtitle": "instant result"
+      },
+      "shareReady": {
+        "title": "Share Ready",
+        "subtitle": "ready to share"
+      }
+    }
+  },
+  "cellsPage": {
+    "topBarTitle": "COLLECTION",
+    "title": "Meet 12 Cells",
+    "description": "Swipe your style, pick your favorite vibe.",
+    "start": "Start",
+    "home": "Home"
+  },
+  "quizPage": {
+    "headerRight": "quiz",
+    "title": "Hi, you",
+    "subtitle": "Quick answers, instant result.",
+    "note": "Find out which dominant cell is active today.",
+    "answered": "Answered",
+    "back": "Back",
+    "next": "Next",
+    "viewResult": "View Result",
+    "finishHint": "Pick the last answer first before viewing your result.",
+    "progressLabel": "Question {current} / {total}",
+    "questions": {
+      "1": {
+        "text": "You accidentally read today's zodiac prediction saying, 'Your luck is very bad today.' What do you do?",
+        "options": {
+          "A": "Laugh it off because you know it's just superstition, then keep working productively.",
+          "B": "Panic right away, think about it all day, and become extra careful with every move or word.",
+          "C": "Feel annoyed and curse inside, 'Ugh, what a mood killer this early in the morning!'"
+        }
+      },
+      "2": {
+        "text": "While walking in public, a stranger keeps staring at you with a weird look. What's your first thought?",
+        "options": {
+          "A": "Is my outfit messy? Or did I spill something on my clothes?",
+          "B": "You suspect their motive, start analyzing their behavior, and assume they might have an agenda.",
+          "C": "Your emotions spike instantly, you feel uncomfortable, and you want to shout, 'What are you looking at?!'"
+        }
+      },
+      "3": {
+        "text": "You just got home after a very stressful day at work or school. What do you do first?",
+        "options": {
+          "A": "Lock yourself in the bathroom and take a long warm shower to release stress.",
+          "B": "Head straight to the kitchen or open a delivery app to order your favorite food.",
+          "C": "Drop onto the bed, play a sad song, and sink into emotional silence."
+        }
+      },
+      "4": {
+        "text": "Someone you really like suddenly compliments your outfit or hair today. How do you react?",
+        "options": {
+          "A": "Smile sweetly, thank them politely, but scream with excitement inside.",
+          "B": "Your face turns red, your heart races, and your brain starts imagining romantic scenarios together.",
+          "C": "You say thanks, but your mind starts drifting into thrilling wild imagination."
+        }
+      },
+      "5": {
+        "text": "You see your dream item on a huge discount, but your savings are tight. How do you decide?",
+        "options": {
+          "A": "Make a logical needs comparison list and decide not to buy it.",
+          "B": "Buy it immediately without overthinking while panicking, 'Buy now, tomorrow's meals can be figured out later!'",
+          "C": "Close the app sadly, then try to stay polite with reality and let it go."
+        }
+      },
+      "6": {
+        "text": "Your friend tells you a little secret, but later you notice inconsistencies in their story. What do you do?",
+        "options": {
+          "A": "Stay neutral and polite, keep listening without interrupting.",
+          "B": "Connect those odd details and quietly investigate what really happened.",
+          "C": "Your mind instantly panics and worries that you might get involved or blamed too."
+        }
+      },
+      "7": {
+        "text": "You're at an empty cinema with your partner/crush. The movie is very romantic and your hands accidentally touch. What's on your mind?",
+        "options": {
+          "A": "You feel warm inside, hold their hand tightly, and wish time would stop in this sweet moment.",
+          "B": "Your mind drifts toward a sweet kiss scene or a more thrilling intimate moment.",
+          "C": "You analyze things realistically: 'How are we getting home later? Do we have time for dinner first?'"
+        }
+      }
+    }
+  },
+  "resultPage": {
+    "loading": "Preparing your result...",
+    "invalidTitle": "Invalid answers",
+    "invalidDescription": "Answer format must be 7 letters and only A, B, or C.",
+    "invalidRetry": "Retake Quiz",
+    "metadataInvalidTitle": "Invalid result",
+    "metadataInvalidDescription": "The quiz answers are invalid. Retake the quiz to get your result.",
+    "metadataTitle": "{cellName} ({englishName})",
+    "metadataDescription": "My selmu result: {shortTitle}. Try the 7-question quiz and find your dominant cell!"
+  },
+  "resultCard": {
+    "communityTag": "Community we all need",
+    "retryTest": "Try Again",
+    "share": "Share",
+    "mascotAlt": "{cellName} mascot"
+  },
+  "shareButton": {
+    "message": "I just tried selmu and got: {cellName} ({englishName})! Find your dominant cell too: {url}",
+    "title": "selmu Quiz Result",
+    "shared": "Link shared successfully.",
+    "copied": "Link copied. Paste it into chat or story.",
+    "failed": "Couldn't share automatically. Please copy this page URL manually."
+  },
+  "resultOg": {
+    "defaultCellName": "Dominant Cell",
+    "defaultSubtitle": "Answer 7 questions and check your dominant cell.",
+    "footer": "Try the quiz and share your result"
+  },
+  "cells": {
+    "love": {
+      "name": "Love Cell",
+      "englishName": "Love Cell",
+      "shortTitle": "Romantic and easily charmed",
+      "description": "You prioritize romantic feelings, get carried away by sweet moments, and often imagine a future together.",
+      "traits": {
+        "trait1": "romantic",
+        "trait2": "warm",
+        "trait3": "easily touched",
+        "trait4": "optimistic about love"
+      },
+      "shareText": "My dominant cell is Love Cell"
+    },
+    "rational": {
+      "name": "Rational Cell",
+      "englishName": "Rational Cell",
+      "shortTitle": "Logical, calm, and solution-driven",
+      "description": "You think clearly, prioritize productivity, and prefer decisions based on reality.",
+      "traits": {
+        "trait1": "logical",
+        "trait2": "calm",
+        "trait3": "productive",
+        "trait4": "realistic"
+      },
+      "shareText": "My dominant cell is Rational Cell"
+    },
+    "emotional": {
+      "name": "Emotional Cell",
+      "englishName": "Emotional Cell",
+      "shortTitle": "Sensitive and full of feelings",
+      "description": "You are highly sensitive to atmosphere, easily moved, and often process life through emotions.",
+      "traits": {
+        "trait1": "sensitive",
+        "trait2": "artistic",
+        "trait3": "feeling-driven",
+        "trait4": "intuitive"
+      },
+      "shareText": "My dominant cell is Emotional Cell"
+    },
+    "hungry": {
+      "name": "Hungry Cell",
+      "englishName": "Hungry Cell",
+      "shortTitle": "Eat first, think later",
+      "description": "When stressed or confused, food becomes your comfort center. You move fast when comfort food is involved.",
+      "traits": {
+        "trait1": "food motivated",
+        "trait2": "spontaneous",
+        "trait3": "easy to crave",
+        "trait4": "comfort seeker"
+      },
+      "shareText": "My dominant cell is Hungry Cell"
+    },
+    "anxiety": {
+      "name": "Anxiety Cell",
+      "englishName": "Anxiety Cell",
+      "shortTitle": "Alert and overthinking",
+      "description": "You quickly spot small risks, stay on guard, and sometimes imagine worst-case scenarios too fast.",
+      "traits": {
+        "trait1": "alert",
+        "trait2": "overthinking",
+        "trait3": "careful",
+        "trait4": "anticipative"
+      },
+      "shareText": "My dominant cell is Anxiety Cell"
+    },
+    "detective": {
+      "name": "Detective Cell",
+      "englishName": "Detective Cell",
+      "shortTitle": "Sharp for odd details",
+      "description": "You love connecting clues, reading patterns, and you don't easily accept stories that feel off.",
+      "traits": {
+        "trait1": "analytical",
+        "trait2": "curious",
+        "trait3": "detail-oriented",
+        "trait4": "healthy skeptic"
+      },
+      "shareText": "My dominant cell is Detective Cell"
+    },
+    "hysteria": {
+      "name": "Hysteria Cell",
+      "englishName": "Hysteria Cell",
+      "shortTitle": "Panic first, expressive always",
+      "description": "You react quickly and intensely, easily carried by pressure or tempting moments.",
+      "traits": {
+        "trait1": "expressive",
+        "trait2": "impulsive",
+        "trait3": "dramatic",
+        "trait4": "reactive"
+      },
+      "shareText": "My dominant cell is Hysteria Cell"
+    },
+    "fashion": {
+      "name": "Fashion Cell",
+      "englishName": "Fashion Cell",
+      "shortTitle": "Aesthetic and appearance-aware",
+      "description": "You are sensitive to visuals, style, and first impressions. Small appearance details can affect your mood instantly.",
+      "traits": {
+        "trait1": "aesthetic",
+        "trait2": "stylish",
+        "trait3": "detail-oriented",
+        "trait4": "self-aware"
+      },
+      "shareText": "My dominant cell is Fashion Cell"
+    },
+    "naughty": {
+      "name": "Naughty Cell",
+      "englishName": "Naughty Cell",
+      "shortTitle": "Playful and tempting",
+      "description": "You have a playful, imaginative side and easily get carried away when romantic tension appears.",
+      "traits": {
+        "trait1": "playful",
+        "trait2": "bold",
+        "trait3": "imaginative",
+        "trait4": "flirty"
+      },
+      "shareText": "My dominant cell is Naughty Cell"
+    },
+    "etiquette": {
+      "name": "Etiquette Cell",
+      "englishName": "Etiquette Cell",
+      "shortTitle": "Polite and composed",
+      "description": "You tend to hold yourself back, keep manners, and choose responses that don't escalate situations.",
+      "traits": {
+        "trait1": "polite",
+        "trait2": "controlled",
+        "trait3": "diplomatic",
+        "trait4": "mature"
+      },
+      "shareText": "My dominant cell is Etiquette Cell"
+    },
+    "shower": {
+      "name": "Shower Cell",
+      "englishName": "Shower Cell",
+      "shortTitle": "Healing through reset rituals",
+      "description": "You need a physical and mental reset. Showering, tidying up, and taking a pause are your recovery tools.",
+      "traits": {
+        "trait1": "needs reset",
+        "trait2": "self-care",
+        "trait3": "calm",
+        "trait4": "ritualistic"
+      },
+      "shareText": "My dominant cell is Shower Cell"
+    },
+    "cursing": {
+      "name": "Cursing Cell",
+      "englishName": "Cursing Cell",
+      "shortTitle": "Explodes fast, recovers fast",
+      "description": "You react spontaneously when your mood drops. Muttering or cursing internally becomes an instant emotional valve.",
+      "traits": {
+        "trait1": "blunt",
+        "trait2": "spontaneous",
+        "trait3": "easily annoyed",
+        "trait4": "emotionally honest"
+      },
+      "shareText": "My dominant cell is Cursing Cell"
+    }
+  },
+  "cellVisuals": {
+    "love": {
+      "quote": "your tiny cell is super active",
+      "caption": "Give it a little attention and it's already writing future scenarios."
+    },
+    "rational": {
+      "quote": "today's mood: calm and tidy",
+      "caption": "Stays calm even when the world is buffering."
+    },
+    "emotional": {
+      "quote": "your tiny cell is super active",
+      "caption": "Soft heart, mood can shift from one song."
+    },
+    "hungry": {
+      "quote": "i think he would be surprised",
+      "caption": "Every problem feels more manageable after a meal."
+    },
+    "anxiety": {
+      "quote": "the mind already ran ahead",
+      "caption": "The mind held a full meeting before the event even happened."
+    },
+    "detective": {
+      "quote": "small detail = long investigation",
+      "caption": "One tiny detail can spark a full investigation."
+    },
+    "hysteria": {
+      "quote": "energy explodes first",
+      "caption": "Energy explodes first, explanation comes later."
+    },
+    "fashion": {
+      "quote": "outfit check complete",
+      "caption": "When the outfit feels right, life feels more under control."
+    },
+    "naughty": {
+      "quote": "looks calm, mind jumps far",
+      "caption": "Looks calm on the outside, but the mind keeps leaping ahead."
+    },
+    "etiquette": {
+      "quote": "today's mood: stay elegant",
+      "caption": "Still polite even when the inner voice already has comments."
+    },
+    "shower": {
+      "quote": "time to reset",
+      "caption": "Life reset starts with warm water and a quiet pause."
+    },
+    "cursing": {
+      "quote": "inner subtitles are fully censored",
+      "caption": "The mouth stays quiet, but inner subtitles are fully censored."
+    }
+  }
+}

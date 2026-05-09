@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "titleDefault": "selmu - Kuis Sel Dominan",
+    "titleTemplate": "%s | selmu",
+    "description": "Jawab 7 pertanyaan singkat dan temukan sel dominanmu hari ini."
+  },
+  "homePage": {
+    "topBarTitle": "selmu",
+    "mascotAlt": "Maskot selmu",
+    "stats": {
+      "like": "Like",
+      "view": "View"
+    },
+    "tags": {
+      "socialToy": "social toy",
+      "quiz": "quiz",
+      "mobile": "mobile"
+    },
+    "title": "Temukan sel dominanmu",
+    "description": "Jawab 7 situasi singkat, lalu lihat hasil yang paling menggambarkan dirimu hari ini.",
+    "startQuiz": "Mulai Kuis",
+    "viewCells": "Lihat Semua Sel",
+    "highlights": {
+      "lifeScene": {
+        "title": "Life Scene",
+        "subtitle": "7 pertanyaan"
+      },
+      "quickResult": {
+        "title": "Quick Result",
+        "subtitle": "hasil instan"
+      },
+      "shareReady": {
+        "title": "Share Ready",
+        "subtitle": "siap dibagikan"
+      }
+    }
+  },
+  "cellsPage": {
+    "topBarTitle": "COLLECTION",
+    "title": "Kenali 12 Sel",
+    "description": "Swipe gaya kamu, pilih vibe favoritmu.",
+    "start": "Mulai",
+    "home": "Home"
+  },
+  "quizPage": {
+    "headerRight": "quiz",
+    "title": "Hi, kamu",
+    "subtitle": "Jawab cepat, hasilmu langsung keluar.",
+    "note": "Cari tahu sel dominan yang lagi aktif hari ini.",
+    "answered": "Terjawab",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "viewResult": "Lihat Hasil",
+    "finishHint": "Pilih jawaban terakhir dulu sebelum melihat hasil.",
+    "progressLabel": "Pertanyaan {current} / {total}",
+    "questions": {
+      "1": {
+        "text": "Kamu tidak sengaja membaca ramalan zodiak/shio hari ini yang mengatakan 'Hari ini keberuntunganmu sangat buruk.' Apa tindakanmu?",
+        "options": {
+          "A": "Menertawakannya karena tahu itu hanya takhayul, lalu lanjut fokus kerja dengan produktif.",
+          "B": "Langsung panik, kepikiran sepanjang hari, dan ekstra hati-hati saat melangkah atau berbicara.",
+          "C": "Merasa kesal dan langsung mengumpat dalam hati, 'Ah, merusak mood pagi-pagi saja!'"
+        }
+      },
+      "2": {
+        "text": "Saat berjalan di tempat umum, ada orang asing yang terus-menerus melihat ke arahmu dengan tatapan aneh. Pikiran pertamamu?",
+        "options": {
+          "A": "Apakah dandananku berantakan? Atau ada noda di bajuku?",
+          "B": "Mencurigai motifnya, mulai menganalisis gerak-gerik orang itu, dan menduga dia punya niat tertentu.",
+          "C": "Langsung emosi bergejolak, merasa risih, dan rasanya ingin berteriak kencang, 'Lihat-lihat apa?!'"
+        }
+      },
+      "3": {
+        "text": "Kamu baru saja pulang ke rumah setelah seharian menghadapi tekanan kerja atau sekolah yang sangat berat. Apa yang kamu lakukan pertama kali?",
+        "options": {
+          "A": "Mengunci diri di kamar mandi untuk mandi air hangat yang sangat lama demi melepaskan stres.",
+          "B": "Langsung mencari makanan di dapur atau membuka aplikasi pesan antar untuk memesan makanan kesukaanmu.",
+          "C": "Merebahkan diri di kasur, memutar lagu sedih, dan membiarkan diri tenggelam dalam keheningan emosional."
+        }
+      },
+      "4": {
+        "text": "Seseorang yang sangat kamu sukai tiba-tiba memuji gaya pakaian atau rambutmu hari ini. Apa reaksimu?",
+        "options": {
+          "A": "Tersenyum sangat manis, berterima kasih dengan sopan, tapi di dalam hati berteriak histeris kegirangan.",
+          "B": "Wajah langsung memerah, jantung berdebar kencang, dan otak langsung membayangkan skenario romantis indah bersamanya.",
+          "C": "Berterima kasih, namun pikiran mulai melayang ke imajinasi liar yang mendebarkan."
+        }
+      },
+      "5": {
+        "text": "Kamu melihat ada barang impianmu yang sedang diskon besar-besaran, tetapi uang di tabunganmu pas-pasan. Bagaimana caramu memutuskan?",
+        "options": {
+          "A": "Membuat daftar perbandingan kebutuhan secara logis dan memutuskan untuk tidak membelinya.",
+          "B": "Langsung membelinya tanpa berpikir panjang sambil berteriak panik, 'Beli sekarang, urusan makan besok dipikir nanti!'",
+          "C": "Menutup aplikasinya dengan sedih, lalu mencoba bersikap sopan pada keadaan dan merelakannya."
+        }
+      },
+      "6": {
+        "text": "Temanmu menceritakan rahasia kecilnya padamu, tapi kemudian kamu menyadari ada kejanggalan dalam ceritanya. Apa yang kamu lakukan?",
+        "options": {
+          "A": "Bersikap netral dan sopan dengan tetap mendengarkannya tanpa memotong pembicaraan.",
+          "B": "Menghubungkan titik-titik kejanggalan tersebut dan diam-diam mencari tahu kebenaran yang sesungguhnya.",
+          "C": "Pikiranmu langsung panik dan cemas jika ternyata kamu juga terlibat atau ikut disalahkan dalam masalah itu."
+        }
+      },
+      "7": {
+        "text": "Kamu sedang berduaan dengan pasangan/gebetan di bioskop yang sepi. Filmnya sangat romantis dan tangan kalian tidak sengaja bersentuhan. Pikiranmu?",
+        "options": {
+          "A": "Merasa hangat di hati, memegang tangannya erat, dan berharap waktu berhenti di saat manis ini.",
+          "B": "Pikiran mulai melayang ke arah adegan ciuman manis atau momen intim yang lebih mendebarkan.",
+          "C": "Menganalisis situasi secara realistis: 'Nanti pulangnya naik apa ya? Sempat makan malam dulu tidak?'"
+        }
+      }
+    }
+  },
+  "resultPage": {
+    "loading": "Menyiapkan hasilmu...",
+    "invalidTitle": "Jawaban tidak valid",
+    "invalidDescription": "Format jawaban harus 7 huruf dan hanya A, B, atau C.",
+    "invalidRetry": "Ulangi Kuis",
+    "metadataInvalidTitle": "Hasil tidak valid",
+    "metadataInvalidDescription": "Jawaban kuis tidak valid. Ulangi kuis untuk mendapatkan hasilmu.",
+    "metadataTitle": "{cellName} ({englishName})",
+    "metadataDescription": "Hasil selmu-ku: {shortTitle}. Coba kuis 7 pertanyaan dan cari tahu sel dominanmu!"
+  },
+  "resultCard": {
+    "communityTag": "Community we all need",
+    "retryTest": "Tes ulang",
+    "share": "Share",
+    "mascotAlt": "Maskot {cellName}"
+  },
+  "shareButton": {
+    "message": "Aku baru coba selmu dan hasilku: {cellName} ({englishName})! Coba cari tahu sel dominanmu juga: {url}",
+    "title": "Hasil Kuis selmu",
+    "shared": "Link berhasil dibagikan.",
+    "copied": "Link berhasil disalin, tinggal paste ke chat atau story.",
+    "failed": "Gagal membagikan otomatis. Salin URL halaman ini manual ya."
+  },
+  "resultOg": {
+    "defaultCellName": "Sel Dominan",
+    "defaultSubtitle": "Jawab 7 pertanyaan dan cek sel dominanmu.",
+    "footer": "Coba kuisnya dan bagikan hasilmu"
+  },
+  "cells": {
+    "love": {
+      "name": "Sel Cinta",
+      "englishName": "Love Cell",
+      "shortTitle": "Romantis dan mudah terpesona",
+      "description": "Kamu mengutamakan perasaan romantis, mudah terbawa suasana manis, dan sering membayangkan masa depan berdua.",
+      "traits": {
+        "trait1": "romantis",
+        "trait2": "hangat",
+        "trait3": "mudah tersentuh",
+        "trait4": "optimis soal cinta"
+      },
+      "shareText": "Sel dominanku adalah Sel Cinta"
+    },
+    "rational": {
+      "name": "Sel Rasional",
+      "englishName": "Rational Cell",
+      "shortTitle": "Logis, tenang, dan solutif",
+      "description": "Kamu berpikir jernih, mengutamakan produktivitas, dan lebih suka mengambil keputusan berdasarkan realita.",
+      "traits": {
+        "trait1": "logis",
+        "trait2": "tenang",
+        "trait3": "produktif",
+        "trait4": "realistis"
+      },
+      "shareText": "Sel dominanku adalah Sel Rasional"
+    },
+    "emotional": {
+      "name": "Sel Emosional",
+      "englishName": "Emotional Cell",
+      "shortTitle": "Sensitif dan penuh rasa",
+      "description": "Kamu sangat peka terhadap suasana, mudah tersentuh, dan sering memproses dunia lewat perasaan.",
+      "traits": {
+        "trait1": "sensitif",
+        "trait2": "artistik",
+        "trait3": "perasa",
+        "trait4": "intuitif"
+      },
+      "shareText": "Sel dominanku adalah Sel Emosional"
+    },
+    "hungry": {
+      "name": "Sel Lapar",
+      "englishName": "Hungry Cell",
+      "shortTitle": "Makan dulu, mikir nanti",
+      "description": "Saat stres atau bingung, makanan sering jadi pusat penyelamat. Kamu cepat bergerak kalau urusannya comfort food.",
+      "traits": {
+        "trait1": "food motivated",
+        "trait2": "spontan",
+        "trait3": "mudah ngidam",
+        "trait4": "comfort seeker"
+      },
+      "shareText": "Sel dominanku adalah Sel Lapar"
+    },
+    "anxiety": {
+      "name": "Sel Kecemasan",
+      "englishName": "Anxiety Cell",
+      "shortTitle": "Waspada dan overthinking",
+      "description": "Kamu mudah menangkap risiko kecil, sering berjaga-jaga, dan kadang terlalu cepat membayangkan skenario buruk.",
+      "traits": {
+        "trait1": "waspada",
+        "trait2": "overthinking",
+        "trait3": "hati-hati",
+        "trait4": "antisipatif"
+      },
+      "shareText": "Sel dominanku adalah Sel Kecemasan"
+    },
+    "detective": {
+      "name": "Sel Detektif",
+      "englishName": "Detective Cell",
+      "shortTitle": "Peka pada kejanggalan",
+      "description": "Kamu suka menghubungkan petunjuk, membaca pola, dan tidak mudah menerima cerita yang terasa janggal.",
+      "traits": {
+        "trait1": "analitis",
+        "trait2": "curious",
+        "trait3": "teliti",
+        "trait4": "skeptis sehat"
+      },
+      "shareText": "Sel dominanku adalah Sel Detektif"
+    },
+    "hysteria": {
+      "name": "Sel Histeria",
+      "englishName": "Hysteria Cell",
+      "shortTitle": "Panik tapi ekspresif",
+      "description": "Kamu bereaksi cepat, intens, dan mudah terbawa momen yang menekan atau terlalu menggoda untuk dilewatkan.",
+      "traits": {
+        "trait1": "ekspresif",
+        "trait2": "impulsif",
+        "trait3": "dramatis",
+        "trait4": "reaktif"
+      },
+      "shareText": "Sel dominanku adalah Sel Histeria"
+    },
+    "fashion": {
+      "name": "Sel Mode",
+      "englishName": "Fashion Cell",
+      "shortTitle": "Estetik dan sadar penampilan",
+      "description": "Kamu peka pada visual, gaya, dan kesan pertama. Detail penampilan bisa langsung memengaruhi mood-mu.",
+      "traits": {
+        "trait1": "estetik",
+        "trait2": "stylish",
+        "trait3": "detail",
+        "trait4": "self-aware"
+      },
+      "shareText": "Sel dominanku adalah Sel Mode"
+    },
+    "naughty": {
+      "name": "Sel Nakal",
+      "englishName": "Naughty Cell",
+      "shortTitle": "Imajinatif dan menggoda",
+      "description": "Kamu punya sisi playful, imajinatif, dan mudah terbawa suasana mendebarkan saat momen romantis muncul.",
+      "traits": {
+        "trait1": "playful",
+        "trait2": "berani",
+        "trait3": "imajinatif",
+        "trait4": "flirty"
+      },
+      "shareText": "Sel dominanku adalah Sel Nakal"
+    },
+    "etiquette": {
+      "name": "Sel Etika",
+      "englishName": "Etiquette Cell",
+      "shortTitle": "Sopan dan menjaga sikap",
+      "description": "Kamu cenderung menahan diri, menjaga tata krama, dan memilih respons yang tidak memperkeruh keadaan.",
+      "traits": {
+        "trait1": "sopan",
+        "trait2": "terkendali",
+        "trait3": "diplomatis",
+        "trait4": "dewasa"
+      },
+      "shareText": "Sel dominanku adalah Sel Etika"
+    },
+    "shower": {
+      "name": "Sel Mandi",
+      "englishName": "Shower Cell",
+      "shortTitle": "Healing lewat ritual bersih-bersih",
+      "description": "Kamu butuh reset fisik dan mental. Mandi, merapikan diri, dan mengambil jeda bisa jadi cara terbaikmu pulih.",
+      "traits": {
+        "trait1": "butuh reset",
+        "trait2": "self-care",
+        "trait3": "tenang",
+        "trait4": "ritualis"
+      },
+      "shareText": "Sel dominanku adalah Sel Mandi"
+    },
+    "cursing": {
+      "name": "Sel Sumpah Serapah",
+      "englishName": "Cursing Cell",
+      "shortTitle": "Meledak cepat, lega cepat",
+      "description": "Kamu punya reaksi spontan saat mood rusak. Menggerutu atau mengumpat dalam hati bisa jadi katup emosi instan.",
+      "traits": {
+        "trait1": "blak-blakan",
+        "trait2": "spontan",
+        "trait3": "mudah kesal",
+        "trait4": "jujur secara emosional"
+      },
+      "shareText": "Sel dominanku adalah Sel Sumpah Serapah"
+    }
+  },
+  "cellVisuals": {
+    "love": {
+      "quote": "sel kecilmu lagi aktif banget",
+      "caption": "Sekali dikasih perhatian, langsung bikin skenario masa depan."
+    },
+    "rational": {
+      "quote": "mood hari ini: kalem dan rapi",
+      "caption": "Tetap kalem walau dunia sedang loading."
+    },
+    "emotional": {
+      "quote": "sel kecilmu lagi aktif banget",
+      "caption": "Hatinya lembut, mood-nya bisa berubah karena satu lagu."
+    },
+    "hungry": {
+      "quote": "i think he would be surprised",
+      "caption": "Semua masalah terasa lebih masuk akal setelah makan."
+    },
+    "anxiety": {
+      "quote": "kepalanya lagi lari duluan",
+      "caption": "Pikirannya sudah rapat duluan sebelum kejadian."
+    },
+    "detective": {
+      "quote": "detail kecil = investigasi panjang",
+      "caption": "Satu detail kecil bisa jadi investigasi panjang."
+    },
+    "hysteria": {
+      "quote": "energinya meledak dulu",
+      "caption": "Energinya meledak dulu, penjelasan belakangan."
+    },
+    "fashion": {
+      "quote": "outfit check complete",
+      "caption": "Kalau outfit aman, hidup terasa lebih terkendali."
+    },
+    "naughty": {
+      "quote": "kelihatannya kalem, isi kepala lompat jauh",
+      "caption": "Kelihatannya kalem, tapi isi kepala suka lompat jauh."
+    },
+    "etiquette": {
+      "quote": "mood hari ini: tetap elegan",
+      "caption": "Tetap sopan meski batin sudah memberi komentar."
+    },
+    "shower": {
+      "quote": "waktunya reset diri",
+      "caption": "Reset hidup dimulai dari air hangat dan diam sebentar."
+    },
+    "cursing": {
+      "quote": "subtitle batinnya penuh sensor",
+      "caption": "Mulut diam, tapi subtitle batin penuh sensor."
+    }
+  }
+}
