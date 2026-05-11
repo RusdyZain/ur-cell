@@ -62,6 +62,8 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
           <div
             style={{
               height: "250px",
+              display: "flex",
+              flexDirection: "column",
               background: `linear-gradient(135deg, ${primary} 0%, ${accent} 60%, #8eb4ff 100%)`,
               padding: "20px",
               color: "white",
