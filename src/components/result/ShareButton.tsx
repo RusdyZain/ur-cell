@@ -89,7 +89,7 @@ export function ShareButton({ cellName, englishName, label, className }: ShareBu
 
     try {
       if (navigator.share) {
-        const file = preparedFile ?? (await fetchCardFile(targets.cardUrl));
+        const file = preparedFile;
         if (file && navigator.canShare?.({ files: [file] })) {
           try {
             await navigator.share({

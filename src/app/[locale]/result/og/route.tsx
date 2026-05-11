@@ -16,8 +16,9 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
   const {searchParams} = new URL(request.url);
   const result = resolveResultFromParam(searchParams.get("a") ?? undefined);
 
-  const [tResultOg, tCells, tCellVisuals] = await Promise.all([
+  const [tResultOg, tResultCard, tCells, tCellVisuals] = await Promise.all([
     getTranslations({locale, namespace: "resultOg"}),
+    getTranslations({locale, namespace: "resultCard"}),
     getTranslations({locale, namespace: "cells"}),
     getTranslations({locale, namespace: "cellVisuals"})
   ]);
@@ -31,9 +32,10 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
   const subtitle = cell?.shortTitle ?? tResultOg("defaultSubtitle");
   const accent = visual?.theme.accent ?? "#4F8DF7";
   const primary = visual?.theme.primary ?? "#6e95ff";
-  const shareAssetUrl = visual
+  const mascotUrl = visual
     ? new URL(visual.share, request.url).toString()
     : new URL("/urcell-logo.png", request.url).toString();
+  const logoUrl = new URL("/urcell-logo.png", request.url).toString();
 
   return new ImageResponse(
     (
@@ -43,7 +45,7 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
           width: "1200px",
           height: "630px",
           background:
-            "radial-gradient(circle at 20% 10%, #e8f1ff 0%, transparent 45%), radial-gradient(circle at 80% 90%, #dce8ff 0%, transparent 42%), linear-gradient(180deg, #c8d4ee 0%, #bfcde9 100%)",
+            "radial-gradient(circle at 20% 8%, #eef5ff 0%, transparent 44%), radial-gradient(circle at 78% 88%, #dee8fb 0%, transparent 42%), linear-gradient(180deg, #d7deec 0%, #cdd6e8 100%)",
           alignItems: "center",
           justifyContent: "center",
           fontFamily: "Nunito Sans, sans-serif"
@@ -51,62 +53,171 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
       >
         <div
           style={{
-            width: "580px",
-            height: "540px",
-            borderRadius: "30px",
-            background: "#f7f9ff",
-            overflow: "hidden",
-            boxShadow: "0 24px 58px rgba(48, 76, 133, 0.34)",
             display: "flex",
-            flexDirection: "column"
+            width: "410px",
+            height: "590px",
+            borderRadius: "34px",
+            background: "linear-gradient(180deg,#eef3fc 0%,#e6ebf7 100%)",
+            overflow: "hidden",
+            boxShadow: "0 24px 56px rgba(58, 86, 143, 0.24)",
+            padding: "14px"
           }}
         >
           <div
             style={{
-              height: "280px",
               display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              background: `linear-gradient(135deg, ${primary} 0%, ${accent} 60%, #8eb4ff 100%)`,
-              padding: "22px",
-              color: "white",
-              gap: "20px"
+              width: "100%",
+              height: "100%",
+              borderRadius: "28px",
+              background: "#f7f9ff",
+              boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.92)",
+              flexDirection: "column",
+              padding: "22px 20px 20px"
             }}
           >
-            <div style={{display: "flex", flexDirection: "column", maxWidth: "310px"}}>
-              <div style={{fontSize: "42px", fontWeight: 900, lineHeight: 1}}>{cellName}</div>
-              <div style={{marginTop: "8px", fontSize: "18px", fontWeight: 700, opacity: 0.9}}>{cell?.englishName}</div>
+            <div style={{display: "flex", justifyContent: "center"}}>
+              <div
+                style={{
+                  display: "flex",
+                  width: "160px",
+                  height: "102px",
+                  borderRadius: "14px",
+                  overflow: "hidden",
+                  boxShadow: "0 14px 24px rgba(20,93,128,0.28)"
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={logoUrl}
+                  alt="your.cell logo"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover"
+                  }}
+                />
+              </div>
             </div>
+
+            <div style={{display: "flex", justifyContent: "center", marginTop: "28px"}}>
+              <div
+                style={{
+                  display: "flex",
+                  width: "250px",
+                  height: "250px",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={mascotUrl}
+                  alt={cellName}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    objectFit: "contain"
+                  }}
+                />
+              </div>
+            </div>
+
             <div
               style={{
                 display: "flex",
-                width: "216px",
-                height: "216px",
+                marginTop: "18px",
+                width: "100%",
                 borderRadius: "24px",
-                background: "rgba(255,255,255,0.9)",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "16px"
+                background: "#ffffff",
+                boxShadow: "0 12px 26px rgba(87,112,160,0.14)",
+                padding: "20px 18px",
+                flexDirection: "column",
+                flex: 1
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={shareAssetUrl}
-                alt={cellName}
+              <div
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain"
+                  display: "flex",
+                  justifyContent: "center",
+                  fontSize: "56px",
+                  fontWeight: 900,
+                  lineHeight: 1
                 }}
-              />
-            </div>
-          </div>
+              >
+                <span style={{marginRight: "8px", color: "#4f8df7"}}>|</span>
+                <span style={{color: accent}}>{cellName}</span>
+              </div>
 
-          <div style={{flex: 1, padding: "24px", color: "#22314d", display: "flex", flexDirection: "column"}}>
-            <div style={{fontSize: "32px", fontWeight: 900, color: accent}}>your.cell</div>
-            <div style={{marginTop: "12px", fontSize: "24px", fontWeight: 800, lineHeight: 1.3}}>{subtitle}</div>
-            <div style={{marginTop: "auto", fontSize: "20px", fontWeight: 700, color: "#5f7196"}}>
-              {tResultOg("footer")}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "8px",
+                  fontSize: "24px",
+                  fontWeight: 700,
+                  color: "#98a6c2"
+                }}
+              >
+                {cell?.englishName}
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "16px",
+                  textAlign: "center",
+                  fontSize: "34px",
+                  fontWeight: 800,
+                  lineHeight: 1.25,
+                  color: accent
+                }}
+              >
+                {visual?.caption ?? subtitle}
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: "auto",
+                  width: "100%",
+                  gap: "10px"
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flex: 1,
+                    minHeight: "60px",
+                    borderRadius: "16px",
+                    background: "#ffffff",
+                    border: "1px solid #dbe5f8",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "30px",
+                    fontWeight: 800,
+                    color: "#2e3e5d"
+                  }}
+                >
+                  {tResultCard("retryTest")}
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flex: 1,
+                    minHeight: "60px",
+                    borderRadius: "16px",
+                    background: `linear-gradient(135deg, ${primary} 0%, ${accent} 100%)`,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "30px",
+                    fontWeight: 800,
+                    color: "#ffffff"
+                  }}
+                >
+                  {tResultCard("share")}
+                </div>
+              </div>
             </div>
           </div>
         </div>
