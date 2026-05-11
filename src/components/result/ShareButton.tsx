@@ -89,8 +89,18 @@ export function ShareButton({ cellName, englishName, label, className }: ShareBu
 
     try {
       if (navigator.share) {
-        const file = preparedFile;
-        if (file && navigator.canShare?.({ files: [file] })) {
+        const file = preparedFile ?? (await fetchCardFile(targets.cardUrl));
+        if (file) {
+          setPreparedFile(file);
+        }
+
+        const canShareFiles = file
+          ? typeof navigator.canShare === "function"
+            ? navigator.canShare({ files: [file] })
+            : true
+          : false;
+
+        if (file && canShareFiles) {
           try {
             await navigator.share({
               title: t("title"),
@@ -108,7 +118,8 @@ export function ShareButton({ cellName, englishName, label, className }: ShareBu
 
         await navigator.share({
           title: t("title"),
-          text: `${message}\n${targets.cardUrl}`
+          text: message,
+          url: targets.cardUrl
         });
         setStatus(t("shared"));
         return;
