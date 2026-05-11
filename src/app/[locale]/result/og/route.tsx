@@ -16,9 +16,8 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
   const {searchParams} = new URL(request.url);
   const result = resolveResultFromParam(searchParams.get("a") ?? undefined);
 
-  const [tResultOg, tResultCard, tCells, tCellVisuals] = await Promise.all([
+  const [tResultOg, tCells, tCellVisuals] = await Promise.all([
     getTranslations({locale, namespace: "resultOg"}),
-    getTranslations({locale, namespace: "resultCard"}),
     getTranslations({locale, namespace: "cells"}),
     getTranslations({locale, namespace: "cellVisuals"})
   ]);
@@ -31,7 +30,6 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
   const cellName = cell?.name ?? tResultOg("defaultCellName");
   const subtitle = cell?.shortTitle ?? tResultOg("defaultSubtitle");
   const accent = visual?.theme.accent ?? "#4F8DF7";
-  const primary = visual?.theme.primary ?? "#6e95ff";
   const mascotUrl = visual
     ? new URL(visual.share, request.url).toString()
     : new URL("/urcell-logo.png", request.url).toString();
@@ -48,7 +46,7 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
             "radial-gradient(circle at 20% 8%, #eef5ff 0%, transparent 44%), radial-gradient(circle at 78% 88%, #dee8fb 0%, transparent 42%), linear-gradient(180deg, #d7deec 0%, #cdd6e8 100%)",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "Nunito Sans, sans-serif"
+          fontFamily: "sans-serif"
         }}
       >
         <div
@@ -139,9 +137,11 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  fontSize: "56px",
+                  alignItems: "center",
+                  textAlign: "center",
+                  fontSize: "44px",
                   fontWeight: 900,
-                  lineHeight: 1
+                  lineHeight: 1.05
                 }}
               >
                 <span style={{marginRight: "8px", color: "#4f8df7"}}>|</span>
@@ -153,7 +153,8 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
                   display: "flex",
                   justifyContent: "center",
                   marginTop: "8px",
-                  fontSize: "24px",
+                  textAlign: "center",
+                  fontSize: "18px",
                   fontWeight: 700,
                   color: "#98a6c2"
                 }}
@@ -165,58 +166,18 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
                 style={{
                   display: "flex",
                   justifyContent: "center",
+                  alignItems: "center",
                   marginTop: "16px",
+                  minHeight: "88px",
+                  overflow: "hidden",
                   textAlign: "center",
-                  fontSize: "34px",
+                  fontSize: "18px",
                   fontWeight: 800,
-                  lineHeight: 1.25,
+                  lineHeight: 1.3,
                   color: accent
                 }}
               >
                 {visual?.caption ?? subtitle}
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  marginTop: "auto",
-                  width: "100%",
-                  gap: "10px"
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flex: 1,
-                    minHeight: "60px",
-                    borderRadius: "16px",
-                    background: "#ffffff",
-                    border: "1px solid #dbe5f8",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "30px",
-                    fontWeight: 800,
-                    color: "#2e3e5d"
-                  }}
-                >
-                  {tResultCard("retryTest")}
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flex: 1,
-                    minHeight: "60px",
-                    borderRadius: "16px",
-                    background: `linear-gradient(135deg, ${primary} 0%, ${accent} 100%)`,
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "30px",
-                    fontWeight: 800,
-                    color: "#ffffff"
-                  }}
-                >
-                  {tResultCard("share")}
-                </div>
               </div>
             </div>
           </div>
