@@ -31,7 +31,9 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
   const subtitle = cell?.shortTitle ?? tResultOg("defaultSubtitle");
   const accent = visual?.theme.accent ?? "#4F8DF7";
   const primary = visual?.theme.primary ?? "#6e95ff";
-  const emoji = visual?.emoji ?? "\u2728";
+  const shareAssetUrl = visual
+    ? new URL(visual.share, request.url).toString()
+    : new URL("/urcell-logo.png", request.url).toString();
 
   return new ImageResponse(
     (
@@ -61,22 +63,47 @@ export async function GET(request: Request, {params}: ResultOgRouteContext) {
         >
           <div
             style={{
-              height: "250px",
+              height: "280px",
               display: "flex",
-              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
               background: `linear-gradient(135deg, ${primary} 0%, ${accent} 60%, #8eb4ff 100%)`,
-              padding: "20px",
+              padding: "22px",
               color: "white",
-              position: "relative"
+              gap: "20px"
             }}
           >
-            <div style={{fontSize: "44px", fontWeight: 900, lineHeight: 1}}>{cellName}</div>
-            <div style={{marginTop: "8px", fontSize: "18px", fontWeight: 700, opacity: 0.9}}>{cell?.englishName}</div>
-            <div style={{position: "absolute", right: "24px", bottom: "12px", fontSize: "90px", lineHeight: 1}}>{emoji}</div>
+            <div style={{display: "flex", flexDirection: "column", maxWidth: "310px"}}>
+              <div style={{fontSize: "42px", fontWeight: 900, lineHeight: 1}}>{cellName}</div>
+              <div style={{marginTop: "8px", fontSize: "18px", fontWeight: 700, opacity: 0.9}}>{cell?.englishName}</div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                width: "216px",
+                height: "216px",
+                borderRadius: "24px",
+                background: "rgba(255,255,255,0.9)",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "16px"
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={shareAssetUrl}
+                alt={cellName}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain"
+                }}
+              />
+            </div>
           </div>
 
           <div style={{flex: 1, padding: "24px", color: "#22314d", display: "flex", flexDirection: "column"}}>
-            <div style={{fontSize: "32px", fontWeight: 900, color: accent}}>selmu</div>
+            <div style={{fontSize: "32px", fontWeight: 900, color: accent}}>your.cell</div>
             <div style={{marginTop: "12px", fontSize: "24px", fontWeight: 800, lineHeight: 1.3}}>{subtitle}</div>
             <div style={{marginTop: "auto", fontSize: "20px", fontWeight: 700, color: "#5f7196"}}>
               {tResultOg("footer")}
