@@ -5,7 +5,7 @@
     "description": "Jawab 7 pertanyaan singkat dan temukan sel dominanmu hari ini."
   },
   "homePage": {
-    "topBarTitle": "selmu",
+    "topBarTitle": "your.cell",
     "mascotAlt": "Maskot selmu",
     "stats": {
       "like": "Like",
@@ -17,21 +17,21 @@
       "mobile": "mobile"
     },
     "title": "Temukan sel dominanmu",
-    "description": "Jawab 7 situasi singkat, lalu lihat hasil yang paling menggambarkan dirimu hari ini.",
+    "description": "Jawab 7 situasi singkat, lalu lihat hasil yang paling menggambarkan dirimu.",
     "startQuiz": "Mulai Kuis",
     "viewCells": "Lihat Semua Sel",
     "highlights": {
       "lifeScene": {
-        "title": "Life Scene",
-        "subtitle": "7 pertanyaan"
+        "title": "7 Skenario",
+        "subtitle": "singkat & relevan"
       },
       "quickResult": {
-        "title": "Quick Result",
-        "subtitle": "hasil instan"
+        "title": "Hasil Instan",
+        "subtitle": "tanpa menunggu"
       },
       "shareReady": {
-        "title": "Share Ready",
-        "subtitle": "siap dibagikan"
+        "title": "Mudah Dibagikan",
+        "subtitle": "siap kirim atau post"
       }
     }
   },
@@ -129,8 +129,8 @@
     "mascotAlt": "Maskot {cellName}"
   },
   "shareButton": {
-    "message": "Aku baru coba selmu dan hasilku: {cellName} ({englishName})! Coba cari tahu sel dominanmu juga: {url}",
-    "title": "Hasil Kuis selmu",
+    "message": "Hasilku di your.cell: {cellName} ({englishName}). Coba tes kamu di {tryUrl}",
+    "title": "Hasil Kuis your.cell",
     "shared": "Link berhasil dibagikan.",
     "copied": "Link berhasil disalin, tinggal paste ke chat atau story.",
     "failed": "Gagal membagikan otomatis. Salin URL halaman ini manual ya."

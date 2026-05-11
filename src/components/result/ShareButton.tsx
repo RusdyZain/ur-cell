@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { PrimaryButton } from "@/components/PrimaryButton";
 
 type ShareButtonProps = {
@@ -12,25 +12,52 @@ type ShareButtonProps = {
 };
 
 export function ShareButton({ cellName, englishName, label, className }: ShareButtonProps) {
+  const locale = useLocale();
   const t = useTranslations("shareButton");
   const [status, setStatus] = useState<string>("");
 
   const handleShare = async () => {
-    const url = window.location.href;
-    const message = t("message", { cellName, englishName, url });
+    const currentUrl = new URL(window.location.href);
+    const encodedAnswers = currentUrl.searchParams.get("a");
+    const tryUrl = `${currentUrl.origin}/${locale}`;
+    const cardUrl = encodedAnswers
+      ? `${currentUrl.origin}/${locale}/result/og?a=${encodedAnswers}`
+      : `${currentUrl.origin}/urcell-logo.png`;
+    const message = t("message", { cellName, englishName, tryUrl });
 
     try {
       if (navigator.share) {
+        try {
+          const imageResponse = await fetch(cardUrl, { cache: "no-store" });
+          if (imageResponse.ok) {
+            const imageBlob = await imageResponse.blob();
+            const imageFile = new File([imageBlob], "your-cell-result.png", {
+              type: "image/png"
+            });
+
+            if (navigator.canShare?.({ files: [imageFile] })) {
+              await navigator.share({
+                title: t("title"),
+                text: message,
+                files: [imageFile]
+              });
+              setStatus(t("shared"));
+              return;
+            }
+          }
+        } catch {
+          // Fall through to text-only share.
+        }
+
         await navigator.share({
           title: t("title"),
-          text: message,
-          url
+          text: `${message}\n${cardUrl}`
         });
         setStatus(t("shared"));
         return;
       }
 
-      await navigator.clipboard.writeText(message);
+      await navigator.clipboard.writeText(`${message}\n${cardUrl}`);
       setStatus(t("copied"));
     } catch {
       setStatus(t("failed"));

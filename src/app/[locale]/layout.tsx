@@ -36,12 +36,21 @@ export async function generateMetadata({params}: Pick<LocaleLayoutProps, "params
       title,
       description,
       type: "website",
-      url: `${siteUrl}/${resolvedLocale}`
+      url: `${siteUrl}/${resolvedLocale}`,
+      images: [
+        {
+          url: "/urcell-logo.png",
+          width: 1536,
+          height: 1024,
+          alt: "urcell logo"
+        }
+      ]
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description
+      description,
+      images: ["/urcell-logo.png"]
     }
   };
 }

@@ -15,62 +15,62 @@ export type CellResult = {
 const baseCells: Record<CellId, Pick<CellResult, "id" | "assetKey" | "fallbackEmoji">> = {
   love: {
     id: "love",
-    assetKey: "love-cell",
+    assetKey: "Sel cinta",
     fallbackEmoji: "\uD83D\uDC97"
   },
   rational: {
     id: "rational",
-    assetKey: "rational-cell",
+    assetKey: "Sel akal rasional",
     fallbackEmoji: "\uD83E\uDDE0"
   },
   emotional: {
     id: "emotional",
-    assetKey: "emotional-cell",
+    assetKey: "Sel emosional",
     fallbackEmoji: "\uD83C\uDF27\uFE0F"
   },
   hungry: {
     id: "hungry",
-    assetKey: "hungry-cell",
+    assetKey: "Sel lapar",
     fallbackEmoji: "\uD83C\uDF5C"
   },
   anxiety: {
     id: "anxiety",
-    assetKey: "anxiety-cell",
+    assetKey: "Sel anxiety",
     fallbackEmoji: "\uD83D\uDE35\u200D\uD83D\uDCAB"
   },
   detective: {
     id: "detective",
-    assetKey: "detective-cell",
+    assetKey: "Sel detektif",
     fallbackEmoji: "\uD83D\uDD75\uFE0F"
   },
   hysteria: {
     id: "hysteria",
-    assetKey: "hysteria-cell",
+    assetKey: "Sel histeris",
     fallbackEmoji: "\uD83D\uDEA8"
   },
   fashion: {
     id: "fashion",
-    assetKey: "fashion-cell",
+    assetKey: "Sel mode",
     fallbackEmoji: "\u2728"
   },
   naughty: {
     id: "naughty",
-    assetKey: "naughty-cell",
+    assetKey: "Sel nakal",
     fallbackEmoji: "\uD83D\uDE08"
   },
   etiquette: {
     id: "etiquette",
-    assetKey: "etiquette-cell",
+    assetKey: "Sel etika",
     fallbackEmoji: "\uD83C\uDFA9"
   },
   shower: {
     id: "shower",
-    assetKey: "shower-cell",
+    assetKey: "Sel mandi",
     fallbackEmoji: "\uD83D\uDEBF"
   },
   cursing: {
     id: "cursing",
-    assetKey: "cursing-cell",
+    assetKey: "Sel sumpah serapah",
     fallbackEmoji: "\uD83D\uDCA2"
   }
 };

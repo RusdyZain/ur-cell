@@ -5,7 +5,7 @@
     "description": "Answer 7 quick questions and discover your dominant cell today."
   },
   "homePage": {
-    "topBarTitle": "selmu",
+    "topBarTitle": "your.cell",
     "mascotAlt": "selmu mascot",
     "stats": {
       "like": "Like",
@@ -17,21 +17,21 @@
       "mobile": "mobile"
     },
     "title": "Discover your dominant cell",
-    "description": "Answer 7 short scenarios and see the result that best matches who you are today.",
+    "description": "Answer 7 short scenarios and see the result that best matches who you are.",
     "startQuiz": "Start Quiz",
     "viewCells": "View All Cells",
     "highlights": {
       "lifeScene": {
-        "title": "Life Scene",
-        "subtitle": "7 questions"
+        "title": "7 Scenarios",
+        "subtitle": "short and relatable"
       },
       "quickResult": {
-        "title": "Quick Result",
-        "subtitle": "instant result"
+        "title": "Instant Result",
+        "subtitle": "no waiting"
       },
       "shareReady": {
-        "title": "Share Ready",
-        "subtitle": "ready to share"
+        "title": "Easy to Share",
+        "subtitle": "ready to post or send"
       }
     }
   },
@@ -129,8 +129,8 @@
     "mascotAlt": "{cellName} mascot"
   },
   "shareButton": {
-    "message": "I just tried selmu and got: {cellName} ({englishName})! Find your dominant cell too: {url}",
-    "title": "selmu Quiz Result",
+    "message": "My your.cell result: {cellName} ({englishName}). Try yours at {tryUrl}",
+    "title": "your.cell Quiz Result",
     "shared": "Link shared successfully.",
     "copied": "Link copied. Paste it into chat or story.",
     "failed": "Couldn't share automatically. Please copy this page URL manually."

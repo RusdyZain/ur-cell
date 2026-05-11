@@ -32,7 +32,7 @@ const defaultRight = (
 );
 
 export function TopBar({
-  title = "selmu",
+  title = "your.cell",
   subtitle,
   leftIcon = defaultMenu,
   rightIcon = defaultRight,

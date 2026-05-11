@@ -27,16 +27,6 @@ export default function QuizPage() {
   const progressValue = ((currentQuestionIndex + 1) / questions.length) * 100;
   const selectedAnswer = answers[currentQuestionIndex];
 
-  const answeredCount = useMemo(() => answers.filter(Boolean).length, [answers]);
-  const answerCounts = useMemo(
-    () => ({
-      A: answers.filter((answer) => answer === "A").length,
-      B: answers.filter((answer) => answer === "B").length,
-      C: answers.filter((answer) => answer === "C").length
-    }),
-    [answers]
-  );
-
   const canFinish = useMemo(() => answers.every((answer): answer is AnswerOption => Boolean(answer)), [answers]);
 
   const pushResult = (nextAnswers: QuizAnswer[]) => {
@@ -88,7 +78,6 @@ export default function QuizPage() {
         </div>
 
         <h1 className="motion-reveal-up motion-stagger-1 mt-3 text-[26px] font-black text-[#22314d]">{t("title")}</h1>
-        <p className="motion-reveal-up motion-stagger-1 mt-1 text-[12px] font-semibold text-[#7b8bab]">{t("subtitle")}</p>
 
         <div className="motion-reveal-up motion-stagger-2 mt-3 rounded-[12px] bg-[#f0f4fd] px-3 py-2 text-[12px] font-semibold text-[#7f90b2]">
           {t("note")}
@@ -97,23 +86,6 @@ export default function QuizPage() {
 
       <section className="px-4 pt-3">
         <ProgressBar value={progressValue} label={progressLabel} />
-      </section>
-
-      <section className="motion-reveal-up motion-stagger-2 mx-4 mt-3 rounded-[16px] bg-gradient-to-r from-[#5f87e0] to-[#4c73d5] px-4 py-3 text-white shadow-[0_10px_22px_rgba(73,102,175,0.3)]">
-        <div className="flex items-center justify-between text-[11px] font-semibold text-white/85">
-          <span>{t("answered")}</span>
-          <span>
-            {answeredCount}/{questions.length}
-          </span>
-        </div>
-        <div className="mt-2 grid grid-cols-3 gap-2 text-center">
-          {(["A", "B", "C"] as const).map((key) => (
-            <div key={key} className="rounded-[10px] bg-white/20 px-2 py-1.5">
-              <p className="text-[10px] font-semibold text-white/80">{key}</p>
-              <p className="text-[14px] font-black">{answerCounts[key]}</p>
-            </div>
-          ))}
-        </div>
       </section>
 
       <section key={questions[currentQuestionIndex].id} className="px-4 pt-3">

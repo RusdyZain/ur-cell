@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito_Sans, Poppins } from "next/font/google";
 import { getLocale } from "next-intl/server";
 import { siteUrl } from "@/lib/site";
@@ -17,7 +17,21 @@ const nunito = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl)
+  metadataBase: new URL(siteUrl),
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      {url: "/favicon.ico", sizes: "any"},
+      {url: "/urcell-logo.svg", type: "image/svg+xml"},
+      {url: "/urcell-logo.png", type: "image/png", sizes: "1536x1024"}
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png"}]
+  }
+};
+
+export const viewport: Viewport = {
+  themeColor: "#11B4DB"
 };
 
 export default async function RootLayout({

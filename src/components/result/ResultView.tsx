@@ -34,7 +34,7 @@ export function ResultView() {
   return (
     <AppShell shellStyle={{ background: "#f7f9ff" }}>
       <div className="flex flex-1 items-center justify-center">
-        <ResultCard cell={cells[result.evaluation.cellId]} evaluation={result.evaluation} />
+        <ResultCard cell={cells[result.evaluation.cellId]} />
       </div>
     </AppShell>
   );

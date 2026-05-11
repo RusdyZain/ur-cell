@@ -1,4 +1,5 @@
 import {useTranslations} from "next-intl";
+import Image from "next/image";
 import {getCellList} from "@/content/cells";
 import {AppShell} from "@/components/AppShell";
 import {TopBar} from "@/components/TopBar";
@@ -30,12 +31,16 @@ export default function CellsPage() {
                 className="overflow-hidden rounded-[14px] border border-[#e7edf9] bg-white p-2 shadow-[0_6px_14px_rgba(91,114,160,0.1)]"
               >
                 <div
-                  className="flex h-14 items-center justify-center rounded-[10px]"
+                  className="flex h-16 items-center justify-center rounded-[10px]"
                   style={{background: `linear-gradient(145deg, ${visual.theme.softBg} 0%, #ffffff 100%)`}}
                 >
-                  <span className="text-2xl" aria-hidden="true">
-                    {visual.emoji}
-                  </span>
+                  <Image
+                    src={visual.thumb}
+                    alt={cell.name}
+                    width={64}
+                    height={64}
+                    className="h-14 w-14 object-contain"
+                  />
                 </div>
                 <p className="mt-1 truncate text-[10px] font-extrabold text-[#2a3956]">{cell.name}</p>
               </article>
