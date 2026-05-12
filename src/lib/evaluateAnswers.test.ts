@@ -17,62 +17,72 @@ describe("evaluateAnswers", () => {
     expect(evaluateAnswers(answers).cellId).toBe("emotional");
   });
 
-  it("matches priority 1 (naughty)", () => {
+  it("matches priority 4 (naughty)", () => {
     const answers: AnswerOption[] = ["A", "A", "C", "C", "A", "A", "B"];
     expect(evaluateAnswers(answers).cellId).toBe("naughty");
   });
 
-  it("matches priority 2 (shower)", () => {
+  it("matches priority 5 (shower)", () => {
     const answers: AnswerOption[] = ["A", "C", "A", "B", "A", "C", "C"];
     expect(evaluateAnswers(answers).cellId).toBe("shower");
   });
 
-  it("matches priority 3 (hungry)", () => {
+  it("matches priority 6 (hungry)", () => {
     const answers: AnswerOption[] = ["A", "C", "B", "A", "B", "C", "B"];
     expect(evaluateAnswers(answers).cellId).toBe("hungry");
   });
 
-  it("matches priority 4 (detective)", () => {
+  it("matches priority 7 (detective)", () => {
     const answers: AnswerOption[] = ["A", "B", "C", "A", "A", "B", "C"];
     expect(evaluateAnswers(answers).cellId).toBe("detective");
   });
 
-  it("matches priority 5 (hysteria)", () => {
+  it("matches priority 8 (hysteria)", () => {
     const answers: AnswerOption[] = ["B", "A", "C", "A", "B", "A", "C"];
     expect(evaluateAnswers(answers).cellId).toBe("hysteria");
   });
 
-  it("matches priority 6 (fashion)", () => {
+  it("matches priority 9 (fashion)", () => {
     const answers: AnswerOption[] = ["C", "A", "C", "A", "A", "B", "B"];
     expect(evaluateAnswers(answers).cellId).toBe("fashion");
   });
 
-  it("matches priority 7 (anxiety)", () => {
+  it("matches priority 10 (anxiety)", () => {
     const answers: AnswerOption[] = ["B", "B", "C", "A", "A", "C", "A"];
     expect(evaluateAnswers(answers).cellId).toBe("anxiety");
   });
 
-  it("matches priority 8 (etiquette)", () => {
+  it("matches priority 11 (etiquette)", () => {
     const answers: AnswerOption[] = ["A", "B", "C", "B", "C", "A", "C"];
     expect(evaluateAnswers(answers).cellId).toBe("etiquette");
   });
 
-  it("matches priority 9 (cursing)", () => {
+  it("matches priority 12 (cursing)", () => {
     const answers: AnswerOption[] = ["C", "C", "C", "A", "A", "B", "A"];
     expect(evaluateAnswers(answers).cellId).toBe("cursing");
   });
 
-  it("keeps strict priority for all-B answers (hungry)", () => {
+  it("applies priority 2 for all-B answers (love)", () => {
     const answers: AnswerOption[] = ["B", "B", "B", "B", "B", "B", "B"];
-    expect(evaluateAnswers(answers).cellId).toBe("hungry");
+    expect(evaluateAnswers(answers).cellId).toBe("love");
   });
 
-  it("follows section 2 example: A-A-A-C-A-A-B -> naughty (priority 1)", () => {
+  it("applies priority 1 when total A > 4", () => {
+    const answers: AnswerOption[] = ["A", "A", "A", "A", "A", "B", "C"];
+    expect(evaluateAnswers(answers).cellId).toBe("rational");
+  });
+
+  it("applies priority 3 when total C > 4 (over cursing pattern)", () => {
+    const answers: AnswerOption[] = ["C", "C", "C", "C", "C", "A", "B"];
+    expect(evaluateAnswers(answers).cellId).toBe("emotional");
+  });
+
+  it("follows updated priority: A-A-A-C-A-A-B -> rational (priority 1)", () => {
     const answers: AnswerOption[] = ["A", "A", "A", "C", "A", "A", "B"];
-    expect(evaluateAnswers(answers).cellId).toBe("naughty");
+    expect(evaluateAnswers(answers).cellId).toBe("rational");
   });
 
-  it("follows section 2 example: B-B-C-A-A-C-A -> anxiety (priority 7)", () => {
+  it("follows section 2 example: B-B-C-A-A-C-A -> anxiety (priority 10)", () => {
     const answers: AnswerOption[] = ["B", "B", "C", "A", "A", "C", "A"];
     expect(evaluateAnswers(answers).cellId).toBe("anxiety");
   });
@@ -87,7 +97,7 @@ describe("evaluateAnswers", () => {
     expect(evaluateAnswers(answers).cellId).toBe("love");
   });
 
-  it("keeps section 2 precedence: C-A-C-A-C-C-B -> fashion (priority 6), not default C", () => {
+  it("keeps section 2 precedence: C-A-C-A-C-C-B -> fashion (priority 9), not default C", () => {
     const answers: AnswerOption[] = ["C", "A", "C", "A", "C", "C", "B"];
     expect(evaluateAnswers(answers).cellId).toBe("fashion");
   });
