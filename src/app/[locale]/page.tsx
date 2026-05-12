@@ -1,9 +1,10 @@
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 import {AppShell} from "@/components/AppShell";
 import {TopBar} from "@/components/TopBar";
 import {PrimaryButton} from "@/components/PrimaryButton";
 import {MascotHero} from "@/components/MascotHero";
 import {Link} from "@/i18n/navigation";
+import {cn} from "@/lib/cn";
 
 const highlights = [
   {id: "lifeScene", tone: "bg-[#dce8ff]", emoji: "\uD83D\uDCF1"},
@@ -12,20 +13,45 @@ const highlights = [
 ] as const;
 
 export default function HomePage() {
+  const locale = useLocale();
   const t = useTranslations("homePage");
   const landingLogo = "/urcell-logo.png";
 
   return (
     <AppShell shellStyle={{background: "#f4fcff"}}>
       <section className="relative mx-4 mt-4 overflow-hidden rounded-[24px] bg-[#11b4db] pb-11 pt-3">
-        <TopBar title={t("topBarTitle")} className="text-white" textClassName="text-white" />
+        <TopBar
+          title={t("topBarTitle")}
+          className="text-white"
+          textClassName="text-white"
+          rightIcon={
+            <nav aria-label={t("languageSwitcherLabel")} className="inline-flex rounded-full bg-white/15 p-0.5">
+              {(["id", "en"] as const).map((targetLocale) => {
+                const isActive = locale === targetLocale;
+                return (
+                  <Link
+                    key={targetLocale}
+                    href="/"
+                    locale={targetLocale}
+                    className={cn(
+                      "rounded-full px-2.5 py-1 text-[10px] font-extrabold tracking-[0.08em] transition",
+                      isActive ? "bg-white text-[#11b4db]" : "text-white/85 hover:text-white"
+                    )}
+                  >
+                    {targetLocale.toUpperCase()}
+                  </Link>
+                );
+              })}
+            </nav>
+          }
+        />
         <div className="motion-reveal-pop mt-1 flex justify-center">
           <MascotHero
             src={landingLogo}
             fallbackEmoji="\u2728"
             alt={t("mascotAlt")}
             priority
-            className="h-[150px] w-[220px] !drop-shadow-none"
+            className="h-auto w-[220px] max-h-[150px] !drop-shadow-none"
           />
         </div>
       </section>
