@@ -83,6 +83,7 @@ export function ResultCard({cell}: ResultCardProps) {
         <ShareButton
           cellName={cell.name}
           englishName={cell.englishName}
+          cardImagePath={resultCardImage}
           label={t("share")}
           className="w-full text-[13px]"
         />

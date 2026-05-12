@@ -7,6 +7,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 type ShareButtonProps = {
   cellName: string;
   englishName: string;
+  cardImagePath?: string;
   label?: string;
   className?: string;
 };
@@ -16,15 +17,17 @@ type ShareTargets = {
   cardUrl: string;
 };
 
-function buildShareTargets(locale: string): ShareTargets | null {
+function buildShareTargets(locale: string, cardImagePath?: string): ShareTargets | null {
   if (typeof window === "undefined") return null;
 
   const currentUrl = new URL(window.location.href);
   const encodedAnswers = currentUrl.searchParams.get("a");
   const tryUrl = `${currentUrl.origin}/${locale}`;
-  const cardUrl = encodedAnswers
-    ? `${currentUrl.origin}/${locale}/result/og?a=${encodedAnswers}`
-    : `${currentUrl.origin}/urcell-logo.png`;
+  const cardUrl = cardImagePath
+    ? new URL(cardImagePath, currentUrl.origin).toString()
+    : encodedAnswers
+      ? `${currentUrl.origin}/${locale}/result/og?a=${encodedAnswers}`
+      : `${currentUrl.origin}/urcell-logo.png`;
 
   return { tryUrl, cardUrl };
 }
@@ -50,7 +53,7 @@ async function fetchCardFile(cardUrl: string): Promise<File | null> {
   }
 }
 
-export function ShareButton({ cellName, englishName, label, className }: ShareButtonProps) {
+export function ShareButton({ cellName, englishName, cardImagePath, label, className }: ShareButtonProps) {
   const locale = useLocale();
   const t = useTranslations("shareButton");
   const [status, setStatus] = useState<string>("");
@@ -58,7 +61,7 @@ export function ShareButton({ cellName, englishName, label, className }: ShareBu
   const [isSharing, setIsSharing] = useState(false);
 
   useEffect(() => {
-    const targets = buildShareTargets(locale);
+    const targets = buildShareTargets(locale, cardImagePath);
     if (!targets) return;
 
     let cancelled = false;
@@ -75,11 +78,11 @@ export function ShareButton({ cellName, englishName, label, className }: ShareBu
     return () => {
       cancelled = true;
     };
-  }, [locale]);
+  }, [cardImagePath, locale]);
 
   const handleShare = async () => {
     if (isSharing) return;
-    const targets = buildShareTargets(locale);
+    const targets = buildShareTargets(locale, cardImagePath);
     if (!targets) return;
 
     setIsSharing(true);

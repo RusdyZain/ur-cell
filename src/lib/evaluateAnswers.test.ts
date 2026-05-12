@@ -67,6 +67,31 @@ describe("evaluateAnswers", () => {
     expect(evaluateAnswers(answers).cellId).toBe("hungry");
   });
 
+  it("follows section 2 example: A-A-A-C-A-A-B -> naughty (priority 1)", () => {
+    const answers: AnswerOption[] = ["A", "A", "A", "C", "A", "A", "B"];
+    expect(evaluateAnswers(answers).cellId).toBe("naughty");
+  });
+
+  it("follows section 2 example: B-B-C-A-A-C-A -> anxiety (priority 7)", () => {
+    const answers: AnswerOption[] = ["B", "B", "C", "A", "A", "C", "A"];
+    expect(evaluateAnswers(answers).cellId).toBe("anxiety");
+  });
+
+  it("follows section 3 default example: A-B-B-A-A-C-A -> rational", () => {
+    const answers: AnswerOption[] = ["A", "B", "B", "A", "A", "C", "A"];
+    expect(evaluateAnswers(answers).cellId).toBe("rational");
+  });
+
+  it("follows section 3 default example: B-C-A-B-C-B-A -> love", () => {
+    const answers: AnswerOption[] = ["B", "C", "A", "B", "C", "B", "A"];
+    expect(evaluateAnswers(answers).cellId).toBe("love");
+  });
+
+  it("keeps section 2 precedence: C-A-C-A-C-C-B -> fashion (priority 6), not default C", () => {
+    const answers: AnswerOption[] = ["C", "A", "C", "A", "C", "C", "B"];
+    expect(evaluateAnswers(answers).cellId).toBe("fashion");
+  });
+
   it("throws for invalid answer count", () => {
     expect(() => evaluateAnswers(["A", "B", "C"] as AnswerOption[])).toThrow(
       "Answers must contain exactly 7 items."
